@@ -41,8 +41,9 @@ function ProjectTracker() {
     return active ? "bg-green-500" : "bg-gray-700";
   };
 
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-black via-blue-900 to-blue-700 text-white pb-20">
+ return (
+  <div className="min-h-screen w-full overflow-x-hidden bg-gradient-to-b from-black via-blue-900 to-blue-700 text-white pb-2">
+
 
       <Navbar />
 
@@ -93,11 +94,11 @@ function ProjectTracker() {
       <div className="mx-6 md:mx-20 mt-10 bg-black/60 border border-blue-500 rounded-2xl p-6">
         <h2 className="text-2xl font-semibold text-blue-300 mb-6">📅 Timeline</h2>
 
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+       <div className="flex flex-wrap justify-between items-center gap-6 w-full overflow-hidden">
           {stages.map((s, i) => (
             <div key={s.id} className="flex items-center md:flex-1">
               {/* Dot */}
-              <div className="flex flex-col items-center">
+             <div className="flex flex-col items-center text-center min-w-[120px] flex-shrink-0">
                 <div className={`w-6 h-6 rounded-full border-2 ${colorFor(s.status)}`} />
                 <span className="text-xs text-gray-300 mt-2 text-center w-28">{s.date}</span>
               </div>

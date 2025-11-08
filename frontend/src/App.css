@@ -40,3 +40,8 @@
 .read-the-docs {
   color: #888;
 }
+/* Stop horizontal overflow (white strip fix) */
+html, body {
+  overflow-x: hidden;
+}
+
